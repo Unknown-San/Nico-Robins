@@ -235,7 +235,7 @@ def start(update: Update, context: CallbackContext):
                             ),
                             InlineKeyboardButton(
                                 text="ɢʀᴏᴜᴘ",
-                                url="https://t.me/Loli_League/",
+                                url="https://t.me/The_Loli_League/",
                             ),
                         ],
                         [
