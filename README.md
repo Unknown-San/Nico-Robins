@@ -1,1 +1,1 @@
-#READ ME 
+## JUST A NOOB BOT
