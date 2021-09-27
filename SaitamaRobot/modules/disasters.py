@@ -65,20 +65,20 @@ def addpiro(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
         
     if int(user_id) in DEV_USERS:
-      message.reply_text("This member is already a Pro Developer")
+      message.reply_text("This member is already a Fleet Admiral")
         
     if user_id in DRAGONS:
-        rt += "Requested HQ to promote a Dragon Disaster to Pro Developer."
+        rt += "Requested HQ to promote a Admiral Disaster to Fleet Admiral."
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "Requested HQ to promote a Demon Disaster to Pro Developer."
+        rt += "Requested HQ to promote a Vice Admiral Disaster to Fleet Admiral."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "Requested HQ to promote a Wolf Disaster to Pro Developer."
+        rt += "Requested HQ to promote a Lieutenant Disaster to Fleet Admiral."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -89,7 +89,7 @@ def addpiro(update: Update, context: CallbackContext) -> str:
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + "\nSuccessfully set Disaster level of {} to Pro Developer!".format(
+        rt + "\nSuccessfully set Disaster level of {} to Fleet Admiral!".format(
             user_member.first_name))
 
     log_message = (
@@ -125,16 +125,16 @@ def addsudo(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        message.reply_text("This member is already a Wizard Dragon Disaster")
+        message.reply_text("This member is already a Admiral Disaster")
         return ""
 
     if user_id in DEMONS:
-        rt += "Requested HA to promote a Demon Disaster to Dragon."
+        rt += "Requested HA to promote a Vice Admiral Disaster to Admiral."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "Requested HA to promote a Wolf Disaster to Dragon."
+        rt += "Requested HA to promote a Lietenant Disaster to Admiral."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -145,7 +145,7 @@ def addsudo(update: Update, context: CallbackContext) -> str:
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + "\nSuccessfully set Disaster level of {} to Dragon!".format(
+        rt + "\nSuccessfully set Disaster level of {} to Admiral!".format(
             user_member.first_name))
 
     log_message = (
@@ -184,16 +184,16 @@ def addsupport(
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "Requested HA to demote this Dragon to Demon"
+        rt += "Requested HA to demote this Admiral to Vice Admiral"
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        message.reply_text("This user is already a Wizard Demon Disaster.")
+        message.reply_text("This user is already a Vice Admiral Disaster.")
         return ""
 
     if user_id in WOLVES:
-        rt += "Requested HA to promote this Wolf Disaster to Demon"
+        rt += "Requested HA to promote this Lietenant Disaster to Vice Admiral"
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -204,7 +204,7 @@ def addsupport(
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\n{user_member.first_name} was added as a Demon Disaster!")
+        rt + f"\n{user_member.first_name} was added as a Vice Admiral!")
 
     log_message = (
         f"#SUPPORT\n"
@@ -239,17 +239,17 @@ def addwhitelist(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "This member is a Dragon Disaster, Demoting to Wolf."
+        rt += "This member is a Admiral, Demoting to Lietenant."
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is already a Demon Disaster, Demoting to Wolf."
+        rt += "This user is already a Vice Admiral, Demoting to Lietenant."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        message.reply_text("This user is already a Wizard  Wolf Disaster.")
+        message.reply_text("This user is already a Lietenant.")
         return ""
 
     data['whitelists'].append(user_id)
@@ -260,7 +260,7 @@ def addwhitelist(update: Update, context: CallbackContext) -> str:
 
     update.effective_message.reply_text(
         rt +
-        f"\nSuccessfully promoted {user_member.first_name} to a Wolf Disaster!")
+        f"\nSuccessfully promoted {user_member.first_name} to a Lietenant!")
 
     log_message = (
         f"#WHITELIST\n"
@@ -295,22 +295,22 @@ def addtiger(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "This member is a Dragon Disaster, Demoting to Tiger."
+        rt += "This member is a Admiral Disaster, Demoting to Seaman."
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is already a Demon Disaster, Demoting to Tiger."
+        rt += "This user is already a Vice Admiral, Demoting to Seaman."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "This user is already a Wolf Disaster, Demoting to Tiger."
+        rt += "This user is already a Lietenant Disaster, Demoting to Seaman."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
     if user_id in TIGERS:
-        message.reply_text("This user is already a Wizard Tiger.")
+        message.reply_text("This user is already a Lietenant.")
         return ""
 
     data['tigers'].append(user_id)
