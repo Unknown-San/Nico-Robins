@@ -723,7 +723,7 @@ UNTIGER_HANDLER = CommandHandler(("removenewgen"), removetiger)
 UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "removebounty"),
                                      removewhitelist)
 
-WHITELISTLIST_HANDLER = CommandHandler(["whitelistlist", "bounty hunters"],
+WHITELISTLIST_HANDLER = CommandHandler(["whitelistlist", "bountyhunters"],
                                        whitelistlist)
 TIGERLIST_HANDLER = CommandHandler(["new gens"], tigerlist)
 SUPPORTLIST_HANDLER = CommandHandler(["supportlist", "warlords"], supportlist)
