@@ -1,9 +1,9 @@
 {
-    "KING": [],
-    "RETARD":[],
-    "YONKOS": [],
-    "WARLORDS": [],
-    "NEWGEN": [],
-    "BOUNTIES": [],
-   
+    "devs": [],
+    "supports": [],
+    "whitelists": [],
+    "sudos": [],
+    "tigers": [],
+    "spammers": []
 }
+
