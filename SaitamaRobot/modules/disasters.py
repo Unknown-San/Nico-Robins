@@ -725,7 +725,7 @@ UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "removebounty"),
 
 WHITELISTLIST_HANDLER = CommandHandler(["whitelistlist", "bountyhunters"],
                                        whitelistlist)
-TIGERLIST_HANDLER = CommandHandler(["new gens"], tigerlist)
+TIGERLIST_HANDLER = CommandHandler(["newgens"], tigerlist)
 SUPPORTLIST_HANDLER = CommandHandler(["supportlist", "warlords"], supportlist)
 SUDOLIST_HANDLER = CommandHandler(["sudolist", "yonkos"], sudolist)
 DEVLIST_HANDLER = CommandHandler(["devlist", "retards"], devlist)
