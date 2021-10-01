@@ -71,26 +71,21 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = """
-Heyo Watashi Nico Desu, I am Groups Management Bot !! I can Help You Manage Your Group for you!!, send /help for command list...[.](https://telegra.ph/file/36f504f4c0c2f0f138806.jpg)
-"""
+PM_START_TEXT = """Heyo Watashi Nico Desu, I am Groups Management Bot !! I can Help You Manage Your Group for you!!, send /help for command list...[.](https://telegra.ph/file/36f504f4c0c2f0f138806.jpg)"""
 
 HELP_STRINGS = """
 Hey there, I'm Nico Robins!
 To make me functional, make sure that i have enough rights in your group.
-
 Helpful commands:
 - /start: Starts me! You've probably already used this.
 - /help: Sends this message; I'll tell you more about myself!
 - /donate: Gives you info on how to support me and my creator.
-
-Join My Support If You Have Any Queries: @NicoRobin_Support
-
+Join My Support If You Have Any Queries: @NobaraSupport
 All commands can be used with the following: / !
 List of all the Modules:
 """.format(
     dispatcher.bot.first_name,
-    "" if not ALLOW_EXCL else "👀 All commands can either be used with / or !.",
+    "" if not ALLOW_EXCL else "📝All commands can either be used with / or !.",
 )
 
 EREN_IMG = "https://telegra.ph/file/3e06334617f26c66c4f2b.jpg"
@@ -225,7 +220,7 @@ def start(update: Update, context: CallbackContext):
                             ),
                             InlineKeyboardButton(
                                 text="🚦 ᴜᴘᴅᴀᴛᴇs 🚦",
-                                url="https://t.me/NicoRobin_updates",
+                                url="https://t.me/NobaraBotUpdates",
                             ),
                         ],
                         [
@@ -235,13 +230,13 @@ def start(update: Update, context: CallbackContext):
                             ),
                             InlineKeyboardButton(
                                 text="ɢʀᴏᴜᴘ",
-                                url="https://t.me/The_Loli_League/",
+                                url="https://t.me/The_Phantom_Troupe/",
                             ),
                         ],
                         [
                             InlineKeyboardButton(
                                 text="⚓️ ʜᴇʟᴘ ⚓️",
-                                url="https://t.me/NicoRobin_robot?start=help",
+                                url="https://t.me/Nobara_superbot?start=help",
                             ),
                         ],
                     ],
@@ -249,7 +244,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "A Light of the Revolution Never Sleeps!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "A jujutsu Sorcerer Never Sleeps!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime,
             ),
             parse_mode=ParseMode.HTML,
@@ -667,7 +662,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("RANDI is deployed successfully!")
+        LOGGER.info("Eren Jaeger is deployed successfully!")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
 
     if len(argv) not in (1, 3, 4):
