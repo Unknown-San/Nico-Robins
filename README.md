@@ -29,7 +29,7 @@ REMEMBER: Turn on worker dyno (Don't worry It's free :D) & Webhook
 Now send the bot /start, If it doesn't respond go to https://dashboard.heroku.com/apps/(app-name)/settings and remove webhook and port.
 ```
 
-  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/EruBot/Ituski.git)
+  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Unknown-san/Nico-Robins.git)
 
 </details>  
 <details>
@@ -179,6 +179,6 @@ Also, missing proper credit for blacklistusers taken from TheRealPhoenixBot (wil
 
 Any other authorship/credits can be seen through the commits.
 
-Should any be missing kindly let us know at [Senku Support](https://t.me/NicoRobin_Support) or simply submit a pull request on the readme.
+Should any be missing kindly let us know at [Nico Robin Support](https://t.me/NicoRobin_Support) or simply submit a pull request on the readme.
 	
 
