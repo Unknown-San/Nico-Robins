@@ -220,23 +220,23 @@ def start(update: Update, context: CallbackContext):
                             ),
                             InlineKeyboardButton(
                                 text="🚦 ᴜᴘᴅᴀᴛᴇs 🚦",
-                                url="https://t.me/NobaraBotUpdates",
+                                url="https://t.me/NicoRobin_updates",
                             ),
                         ],
                         [
                             InlineKeyboardButton(
                                 text=" ᴡɪᴢᴀʀᴅ ",
-                                url="https://t.me/NobaraBotUpdates/5",
+                                url="https://t.me/NicoRobin_updates/5",
                             ),
                             InlineKeyboardButton(
                                 text="ɢʀᴏᴜᴘ",
-                                url="https://t.me/The_Phantom_Troupe/",
+                                url="https://t.me/The_loli_league/",
                             ),
                         ],
                         [
                             InlineKeyboardButton(
                                 text="⚓️ ʜᴇʟᴘ ⚓️",
-                                url="https://t.me/Nobara_superbot?start=help",
+                                url="https://t.me/NicoRobin_robot?start=help",
                             ),
                         ],
                     ],
@@ -244,7 +244,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "A jujutsu Sorcerer Never Sleeps!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "A Light Of Revolution Never Sleeps!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime,
             ),
             parse_mode=ParseMode.HTML,
@@ -621,7 +621,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I am now Alive!](https://telegra.ph/file/b4be86f0b493954bfa5aa.mp4)", parse_mode=ParseMode.MARKDOWN)
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I am now Alive!](https://telegra.ph/file/e11ced336019e2a887f07.jpg)", parse_mode=ParseMode.MARKDOWN)
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!",
