@@ -48,7 +48,7 @@ def add_chat(update: Update, context: CallbackContext):
             f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
         )
         return message
-    msg.reply_text("Nobara AI is already enabled for this chat!")
+    msg.reply_text("Nico Robins AI is already enabled for this chat!")
     return ""
 
 
@@ -60,10 +60,10 @@ def rem_chat(update: Update, context: CallbackContext):
     user = update.effective_user
     is_kuki = sql.is_kuki(chat.id)
     if not is_kuki:
-        msg.reply_text("Nobara AI isn't enabled here in the first place!")
+        msg.reply_text("Nico AI isn't enabled here in the first place!")
         return ""
     sql.rem_kuki(chat.id)
-    msg.reply_text("Nobara AI disabled successfully!")
+    msg.reply_text("Nico AI disabled successfully!")
     message = (
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"AI_DISABLED\n"
@@ -76,7 +76,7 @@ def rem_chat(update: Update, context: CallbackContext):
 
 def kuki_message(context: CallbackContext, message):
     reply_message = message.reply_to_message
-    if message.text.lower() == "Nobara":
+    if message.text.lower() == "Nico":
         return True
     if reply_message:
         if reply_message.from_user.id == context.bot.get_me().id:
