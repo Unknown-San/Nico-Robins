@@ -80,7 +80,7 @@ Helpful commands:
 - /start: Starts me! You've probably already used this.
 - /help: Sends this message; I'll tell you more about myself!
 - /donate: Gives you info on how to support me and my creator.
-Join My Support If You Have Any Queries: @NobaraSupport
+Join My Support If You Have Any Queries: @NicoRobin_Support
 All commands can be used with the following: / !
 List of all the Modules:
 """.format(
