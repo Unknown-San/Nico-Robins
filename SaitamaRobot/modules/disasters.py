@@ -543,7 +543,6 @@ def removetiger(update: Update, context: CallbackContext) -> str:
             f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
             f"<b>User:</b> {mention_html(user_member.id, html.escape(user_member.first_name))}"
         )
-
         if chat.type != 'private':
             log_message = f"<b>{html.escape(chat.title)}:</b>\n" + log_message
 
@@ -556,7 +555,7 @@ def removetiger(update: Update, context: CallbackContext) -> str:
 @run_async
 @whitelist_plus
 def whitelistlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Wolf Disasters 🐺:</b>\n"
+    reply = "<b>Known Bounty Hunter Disasters 🐺:</b>\n"
     bot = context.bot
     for each_user in WOLVES:
         user_id = int(each_user)
@@ -572,7 +571,7 @@ def whitelistlist(update: Update, context: CallbackContext):
 @run_async
 @whitelist_plus
 def tigerlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Wizard Tiger Disasters 🐯:</b>\n"
+    reply = "<b>Known New generation Disasters :</b>\n"
     bot = context.bot
     for each_user in TIGERS:
         user_id = int(each_user)
@@ -588,7 +587,7 @@ def tigerlist(update: Update, context: CallbackContext):
 @whitelist_plus
 def supportlist(update: Update, context: CallbackContext):
     bot = context.bot
-    reply = "<b>Known Demon Wizard Disasters 👹:</b>\n"
+    reply = "<b>Known Warlords Disasters 👹:</b>\n"
     for each_user in DEMONS:
         user_id = int(each_user)
         try:
@@ -604,7 +603,7 @@ def supportlist(update: Update, context: CallbackContext):
 def sudolist(update: Update, context: CallbackContext):
     bot = context.bot
     true_sudo = list(set(DRAGONS) - set(DEV_USERS))
-    reply = "<b>Known Wizard Dragon Disasters 🐉:</b>\n"
+    reply = "<b>Known Wizard Yonkos:</b>\n"
     for each_user in true_sudo:
         user_id = int(each_user)
         try:
@@ -620,7 +619,7 @@ def sudolist(update: Update, context: CallbackContext):
 def devlist(update: Update, context: CallbackContext):
     bot = context.bot
     true_dev = list(set(DEV_USERS) - {OWNER_ID})
-    reply = "<b>Jujutsu Wizard Throne Holders ⚡️:</b>\n"
+    reply = "<b>Retarded Marine Devs:</b>\n"
     for each_user in true_dev:
         user_id = int(each_user)
         try:
