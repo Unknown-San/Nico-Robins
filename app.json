@@ -1,5 +1,5 @@
 {
-      "name": "FoundingTitanRobot",
+      "name": "Nico Robin Robot",
       "description": "An Anime themed Telegram group management bot.",
       "keywords": [
          "telegram",
@@ -8,7 +8,7 @@
          "manager",
          "Eren"
       ],   
-  "logo":    "https://telegra.ph/file/ed5b77b9aa323a3abd08e.jpg",
+  "logo":    "https://telegra.ph/file/ac41e5086929782d252ef.jpg",
  "repository": "https://github.com/sasukeuchiha912/ErenJaegerRobot",
    "addons": [
       {
