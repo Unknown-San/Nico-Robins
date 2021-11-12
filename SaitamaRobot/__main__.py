@@ -216,7 +216,7 @@ def start(update: Update, context: CallbackContext):
                         [
                             InlineKeyboardButton(
                                 text="⛩ sᴜᴘᴘᴏʀᴛ ⛩",
-                                url=f"https://t.me/{https://t.me/Freia_Support}",
+                                url=f"https://t.me/Freia_Support",
                             ),
                             InlineKeyboardButton(
                                 text="🚦 ᴜᴘᴅᴀᴛᴇs 🚦",
