@@ -244,7 +244,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "  I wouldn't sleep until satisfy you 🥵🥵 ! " https://telegra.ph/file/2d10ae1dc379c5652a776.jpg "\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "  I won't sleep until satisfy you 🥵🥵 ! \n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime,
             ),
             parse_mode=ParseMode.HTML,
