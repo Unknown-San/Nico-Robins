@@ -71,7 +71,10 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = """Heyo Watashi Flare Robot, I am Groups Management Bot with lots of Sexy and cool features !! I can Help You Manage Your Group for you!!, send /help for command list...[.](https://telegra.ph/file/36f504f4c0c2f0f138806.jpg)"""
+PM_START_TEXT = "hey! ✌🥵🥵
+I am an Anime themed advance group management bot with a lots of Sexy and Cool Features.
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖[.](https://telegra.ph/file/36f504f4c0c2f0f138806.jpg)"""
 
 HELP_STRINGS = """
 Hey there, I'm Flare Robot !
