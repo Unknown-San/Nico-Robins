@@ -1,15 +1,9 @@
-# Copyright (C) 2021 AsunaRobot
-# made by @The_Ghost_Hunter on Telegram.
-# github account : https://github.com/HuntingBots/
-# This file is part of AsunaRobot (Telegram Bot)
-
-
 import os, logging, asyncio
 from telethon import Button
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
-from AsunaRobot.events import register as asuna
+from SaitamaRobot.events import register as asuna
 
 
 logging.basicConfig(
