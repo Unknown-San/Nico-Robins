@@ -216,17 +216,17 @@ def start(update: Update, context: CallbackContext):
                         [
                             InlineKeyboardButton(
                                 text="⛩ sᴜᴘᴘᴏʀᴛ ⛩",
-                                url=f"https://t.me/{SUPPORT_CHAT}",
+                                url=f"https://t.me/{https://t.me/Freia_Support}",
                             ),
                             InlineKeyboardButton(
                                 text="🚦 ᴜᴘᴅᴀᴛᴇs 🚦",
-                                url="https://t.me/NicoRobin_updates",
+                                url="https://t.me/Freia_Updates",
                             ),
                         ],
                         [
                             InlineKeyboardButton(
-                                text=" ᴡɪᴢᴀʀᴅ ",
-                                url="https://t.me/NicoRobin_updates/5",
+                                text=" ʟᴏɢs ",
+                                url="https://t.me/Freia_Logs",
                             ),
                             InlineKeyboardButton(
                                 text="ɢʀᴏᴜᴘ",
@@ -244,7 +244,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "A Light Of Revolution Never Sleeps!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "  I wouldn't sleep until satisfy you 🥵🥵 !\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime,
             ),
             parse_mode=ParseMode.HTML,
