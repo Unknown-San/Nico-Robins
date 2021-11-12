@@ -71,7 +71,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = "hey! ✌🥵🥵  I am an Anime themed advance group management bot with a lots of Sexy and Cool Features. [.](https://telegra.ph/file/36f504f4c0c2f0f138806.jpg)"""
+PM_START_TEXT = "hey! ✌🥵🥵  I am an Anime themed advance group management bot with a lots of Sexy and Cool Features. [.](https://telegra.ph/file/2d10ae1dc379c5652a776.jpg)"""
 
 HELP_STRINGS = """
 Hey there, I'm Flare Robot !
@@ -88,7 +88,7 @@ List of all the Modules:
     "" if not ALLOW_EXCL else "📝All commands can either be used with / or !.",
 )
 
-EREN_IMG = "https://telegra.ph/file/3e06334617f26c66c4f2b.jpg"
+EREN_IMG = "https://telegra.ph/file/2d10ae1dc379c5652a776.jpg"
 
 DONATE_STRING = """Durov Is my Cousin By The Way.."""
 
@@ -244,7 +244,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "  I wouldn't sleep until satisfy you 🥵🥵 !\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "  I wouldn't sleep until satisfy you 🥵🥵 ! " https://telegra.ph/file/2d10ae1dc379c5652a776.jpg "\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime,
             ),
             parse_mode=ParseMode.HTML,
