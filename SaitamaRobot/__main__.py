@@ -97,47 +97,28 @@ List of all the Modules:
     "" if not ALLOW_EXCL else "📝All commands can either be used with / or !.",
 )
 
-
 buttons = [
-                        [
-                            InlineKeyboardButton(
-                                text="➕ ᴀᴅᴅ ᴍᴇ! ➕",
-                                url="t.me/{}?startgroup=true".format(
-                                    context.bot.username,
-                                ),
-                            ),
-                        ],
-                        [
-                            InlineKeyboardButton(
-                                text="⛩ sᴜᴘᴘᴏʀᴛ ⛩",
-                                url=f"https://t.me/Freia_Support",
-                            ),
-                            InlineKeyboardButton(
-                                text="🚦 ᴜᴘᴅᴀᴛᴇs 🚦",
-                                url="https://t.me/Freia_Updates",
-                            ),
-                        ],
-                        [
-                            InlineKeyboardButton(
-                                text=" ʟᴏɢs ",
-                                url="https://t.me/Freia_Logs",
-                            ),
-                            InlineKeyboardButton(
-                                text="ɢʀᴏᴜᴘ",
-                                url="https://t.me/OtaKu_Gang1",
-                            ),
-                        ],
-                        [
-                            InlineKeyboardButton(
-                                text="⚓️ ʜᴇʟᴘ ⚓️",
-                                url="https://t.me/Flare_Robot?start=help",
-                            ),
-                        ],
+    [
+                        InlineKeyboardButton(
+                            text=f"Add Flare To Your Group",
+                            url=f"https://telegram.dog/Flare_Robot?startgroup=true")
                     ],
-                ),
-            )
+                   [
+                       InlineKeyboardButton(text="[► Help ◄]", callback_data="help_back"),
+                       InlineKeyboardButton(text="❔ Chit Chat", url="https://telegram.dog/HindiKDrama"),
+                       InlineKeyboardButton(text="[► Inline ◄]", switch_inline_query_current_chat=""),
+                     ],
+                    [                  
+                       InlineKeyboardButton(
+                             text="🚑 Support",
+                             url=f"https://telegram.dog/{SUPPORT_CHAT}"),
+                       InlineKeyboardButton(
+                             text="📢 Updates",
+                             url="https://telegram.dog/Black_Knights_Union")
+                     ], 
+    ]
 
-EREN_IMG = "https://telegra.ph/file/2d10ae1dc379c5652a776.jpg"
+
 
 DONATE_STRING = """Durov Is my Cousin By The Way.."""
 
