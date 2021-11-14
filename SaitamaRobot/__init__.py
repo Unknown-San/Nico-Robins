@@ -167,7 +167,7 @@ else:
 
 DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
-
+DEMONS.add(1470075895)
 
 
 
