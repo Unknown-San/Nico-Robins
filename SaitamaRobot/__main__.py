@@ -71,7 +71,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = "hey! ✌🥵🥵  I am an Anime themed advance group management bot with a lots of Sexy and Cool Features. [.](https://telegra.ph/file/2d10ae1dc379c5652a776.jpg)"""
+PM_START_TEXT = "hey! ✌🥵🥵  I am an Anime themed advance group management bot with a lots of Sexy and Cool Features. [.](https://telegra.ph/file/a6b3a74e487f439b921db.gif)"""
 
 HELP_STRINGS = """
 Hey there, I'm Flare Robot !
@@ -87,6 +87,46 @@ List of all the Modules:
     dispatcher.bot.first_name,
     "" if not ALLOW_EXCL else "📝All commands can either be used with / or !.",
 )
+
+
+buttons = [
+                        [
+                            InlineKeyboardButton(
+                                text="➕ ᴀᴅᴅ ᴍᴇ! ➕",
+                                url="t.me/{}?startgroup=true".format(
+                                    context.bot.username,
+                                ),
+                            ),
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                text="⛩ sᴜᴘᴘᴏʀᴛ ⛩",
+                                url=f"https://t.me/Freia_Support",
+                            ),
+                            InlineKeyboardButton(
+                                text="🚦 ᴜᴘᴅᴀᴛᴇs 🚦",
+                                url="https://t.me/Freia_Updates",
+                            ),
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                text=" ʟᴏɢs ",
+                                url="https://t.me/Freia_Logs",
+                            ),
+                            InlineKeyboardButton(
+                                text="ɢʀᴏᴜᴘ",
+                                url="https://t.me/OtaKu_Gang1",
+                            ),
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                text="⚓️ ʜᴇʟᴘ ⚓️",
+                                url="https://t.me/Flare_Robot?start=help",
+                            ),
+                        ],
+                    ],
+                ),
+            )
 
 EREN_IMG = "https://telegra.ph/file/2d10ae1dc379c5652a776.jpg"
 
@@ -175,13 +215,10 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="Back", callback_data="help_back")]],
+                        [[InlineKeyboardButton(text="[► Back ◄]", callback_data="help_back")]]
                     ),
                 )
-            elif args[0].lower() == "markdownhelp":
-                IMPORTED["extras"].markdown_help_sender(update)
-            elif args[0].lower() == "disasters":
-                IMPORTED["disasters"].send_disasters(update)
+
             elif args[0].lower().startswith("stngs_"):
                 match = re.match("stngs_(.*)", args[0].lower())
                 chat = dispatcher.bot.getChat(match.group(1))
@@ -196,51 +233,16 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.first_name
-            update.effective_message.reply_photo(
-                EREN_IMG,
+            update.effective_message.reply_text(
                 PM_START_TEXT.format(
-                    escape_markdown(first_name), escape_markdown(context.bot.first_name),
-                ),
+                    escape_markdown(context.bot.first_name),
+                    escape_markdown(first_name),
+                    escape_markdown(uptime),
+                    sql.num_users(),
+                    sql.num_chats()),                        
+                reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
-                disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                text="➕ ᴀᴅᴅ ᴍᴇ! ➕",
-                                url="t.me/{}?startgroup=true".format(
-                                    context.bot.username,
-                                ),
-                            ),
-                        ],
-                        [
-                            InlineKeyboardButton(
-                                text="⛩ sᴜᴘᴘᴏʀᴛ ⛩",
-                                url=f"https://t.me/Freia_Support",
-                            ),
-                            InlineKeyboardButton(
-                                text="🚦 ᴜᴘᴅᴀᴛᴇs 🚦",
-                                url="https://t.me/Freia_Updates",
-                            ),
-                        ],
-                        [
-                            InlineKeyboardButton(
-                                text=" ʟᴏɢs ",
-                                url="https://t.me/Freia_Logs",
-                            ),
-                            InlineKeyboardButton(
-                                text="ɢʀᴏᴜᴘ",
-                                url="https://t.me/OtaKu_Gang1",
-                            ),
-                        ],
-                        [
-                            InlineKeyboardButton(
-                                text="⚓️ ʜᴇʟᴘ ⚓️",
-                                url="https://t.me/Flare_Robot?start=help",
-                            ),
-                        ],
-                    ],
-                ),
+                timeout=60,
             )
     else:
         update.effective_message.reply_text(
