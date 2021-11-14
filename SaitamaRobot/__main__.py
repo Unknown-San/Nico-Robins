@@ -71,6 +71,7 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
+GROUP_START_IMG = "https://telegra.ph/file/a6b3a74e487f439b921db.gif"
 
 PM_START_TEXT = """
 ────「 {} 」────
@@ -189,7 +190,6 @@ def test(update: Update, context: CallbackContext):
     update.effective_message.reply_text("This person edited a message")
     print(update.effective_message)
 
-
 @run_async
 def start(update: Update, context: CallbackContext):
     args = context.args
@@ -236,14 +236,28 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_text(
-            "I won't sleep until I satisfy you 🥵🥵!\n<b>Haven't slept since:</b> <code>{}</code>".format(
-                uptime,
+        update.effective_message.reply_animation(
+            GROUP_START_IMG, caption= "I won't sleep until I satisfy you 🥵🥵!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+                uptime
             ),
             parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="🚑 Support",
+                            url=f"https://telegram.dog/{SUPPORT_CHAT}",
+                        ),
+                        InlineKeyboardButton(
+                            text="📢 Updates",
+                            url="https://telegram.dog/Black_Knights_Union",
+                        ),
+                    ]
+                ]
+            ),
         )
 
-
+        
 # for test purposes
 def error_callback(update: Update, context: CallbackContext):
     error = context.error
