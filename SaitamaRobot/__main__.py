@@ -75,7 +75,7 @@ GROUP_START_IMG = "https://telegra.ph/file/a6b3a74e487f439b921db.gif"
 
 PM_START_TEXT = """
 ────「 {} 」────
-*Hola! {},*
+*Hey🥵🥵! {},*
 * I am an Anime themed advance group management bot with a lots of Sexy and Cool Features.*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 • *Uptime:* `{}`
@@ -107,16 +107,16 @@ buttons = [
                     ],
                    [
                        InlineKeyboardButton(text="[► Help ◄]", callback_data="help_back"),
-                       InlineKeyboardButton(text="❔ Chit Chat", url="https://telegram.dog/HindiKDrama"),
+                       InlineKeyboardButton(text="❔ Chit Chat", url="https://t.me/OtaKu_Gang1"),
                        InlineKeyboardButton(text="[► Inline ◄]", switch_inline_query_current_chat=""),
                      ],
                     [                  
                        InlineKeyboardButton(
                              text="🚑 Support",
-                             url=f"https://telegram.dog/{SUPPORT_CHAT}"),
+                             url=f"https://telegram.dog/Freia_Support"),
                        InlineKeyboardButton(
                              text="📢 Updates",
-                             url="https://telegram.dog/Black_Knights_Union")
+                             url="https://t.me/Freia_Updates")
                      ], 
     ]
 
@@ -246,11 +246,11 @@ def start(update: Update, context: CallbackContext):
                     [
                         InlineKeyboardButton(
                             text="🚑 Support",
-                            url=f"https://telegram.dog/{SUPPORT_CHAT}",
+                            url=f"https://telegram.dog/Freia_Support",
                         ),
                         InlineKeyboardButton(
                             text="📢 Updates",
-                            url="https://telegram.dog/Black_Knights_Union",
+                            url="https://t.me/Freia_Updates",
                         ),
                     ]
                 ]
@@ -369,7 +369,7 @@ def get_help(update: Update, context: CallbackContext):
                         [
                             InlineKeyboardButton(
                                 text="Help",
-                                url="t.me/{}?start=ghelp_{}".format(
+                                url="t.me/Flare_Robot?start=ghelp_{}".format(
                                     context.bot.username, module,
                                 ),
                             ),
@@ -385,7 +385,7 @@ def get_help(update: Update, context: CallbackContext):
                     [
                         InlineKeyboardButton(
                             text="Help",
-                            url="t.me/{}?start=help".format(context.bot.username),
+                            url="t.me/Flare_Robot?start=help".format(context.bot.username),
                         ),
                     ],
                 ],
