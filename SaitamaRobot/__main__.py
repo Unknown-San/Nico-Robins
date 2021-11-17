@@ -75,7 +75,7 @@ GROUP_START_IMG = "https://telegra.ph/file/2cd6f97e0cf04d63cabf4.mp4"
 
 PM_START_TEXT = """
 ────「 {} 」────
-*Hey🥵🥵! {},*
+*Hey! {},*
 * I am an Anime themed advance group management bot with a lots of Sexy and Cool Features.*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 • *Uptime:* `{}`
