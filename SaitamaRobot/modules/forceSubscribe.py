@@ -38,7 +38,7 @@ from pyrogram.errors.exceptions.bad_request_400 import (
 )
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
 
-from SaitamaRobot import BOT_ID, BOT_USERNAME, BOT_NAME
+from SaitamaRobot import 2103013523, @Flare_Robot, Flare Arlgrande
 
 # from SaitamaRobot import OWNER_ID as SUDO_USERS
 from SaitamaRobot import pgram
