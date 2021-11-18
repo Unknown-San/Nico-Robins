@@ -12,7 +12,7 @@ from pyrogram.errors.exceptions.bad_request_400 import (
 )
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
 
-from SaitamaRobot import DRAGONS as SUDO_USERS
+from SaitamaRobot import DRAGONS as DRAGONS
 from SaitamaRobot import pbot
 from SaitamaRobot.modules.sql import forceSubscribe_sql as sql
 
