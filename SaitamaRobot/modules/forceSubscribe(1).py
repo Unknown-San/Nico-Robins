@@ -1,4 +1,4 @@
-# credits @Weeb_lover
+# credits @Chifuyu_Matsuno_Kun
 
 import logging
 import time
