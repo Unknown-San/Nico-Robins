@@ -25,7 +25,7 @@ SOFTWARE.
 """
 
 from sqlalchemy import Column, String, Numeric, Boolean
-from Cutiepii_Robot.modules.sql import BASE, SESSION
+from SaitamaRobot.modules.sql import BASE, SESSION
 
 
 class forceSubscribe(BASE):
