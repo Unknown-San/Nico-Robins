@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Numeric, Boolean
+rom sqlalchemy import Column, String, Numeric, Boolean
 from GabiBraunRobot.modules.sql import BASE, SESSION
 
 
