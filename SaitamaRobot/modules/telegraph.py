@@ -1,18 +1,46 @@
-from SaitamaRobot.events import register
-from SaitamaRobot import telethn as tbot
-TMP_DOWNLOAD_DIRECTORY = "tg-File/"
-from telethon import events
+"""
+MIT License
+
+Copyright (C) 2021 Awesome-RJ
+
+This file is part of @Cutiepii_Robot (Telegram Bot)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+"""
+
 import os
+
+from SaitamaRobot.events import register
+from SaitamaRobot import telethn
+from telethon import events
 from PIL import Image
 from datetime import datetime
 from telegraph import Telegraph, upload_file, exceptions
-babe = "SaitamaRobot"
+
+TMP_DOWNLOAD_DIRECTORY = "tg-File/"
+babe = "Cutiepii_Robot"
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=babe)
 auth_url = r["auth_url"]
 
 
-@register(pattern="^/t(m|t) ?(.*)")
+@register(pattern="^/t(gm|gt) ?(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -21,8 +49,8 @@ async def _(event):
         start = datetime.now()
         r_message = await event.get_reply_message()
         input_str = event.pattern_match.group(1)
-        if input_str == "m":
-            downloaded_file_name = await tbot.download_media(
+        if input_str == "gm":
+            downloaded_file_name = await telethn.download_media(
                 r_message,
                 TMP_DOWNLOAD_DIRECTORY
             )
@@ -42,8 +70,8 @@ async def _(event):
                 ms_two = (end - start).seconds
                 os.remove(downloaded_file_name)
                 await h.edit("Uploaded to [Telegraph](https://telegra.ph{}) in {} seconds.".format(media_urls[0], (ms + ms_two)), link_preview=True)
-        elif input_str == "t":
-            user_object = await tbot.get_entity(r_message.sender_id)
+        elif input_str == "gt":
+            user_object = await telethn.get_entity(r_message.sender_id)
             title_of_page = user_object.first_name # + " " + user_object.last_name
             # apparently, all Users do not have last_name field
             if optional_title:
@@ -52,7 +80,7 @@ async def _(event):
             if r_message.media:
                 if page_content != "":
                     title_of_page = page_content
-                downloaded_file_name = await tbot.download_media(
+                downloaded_file_name = await telethn.download_media(
                     r_message,
                     TMP_DOWNLOAD_DIRECTORY
                 )
@@ -81,10 +109,5 @@ def resize_image(image):
 file_help = os.path.basename(__file__)
 file_help = file_help.replace(".py", "")
 file_helpo = file_help.replace("_", " ")
-
-__help__ = """
- - /tm : Get Telegraph Link Of Replied Media
- - /tt: Get Telegraph Link of Replied Text
-"""
 
 __mod_name__ = "Telegraph"
