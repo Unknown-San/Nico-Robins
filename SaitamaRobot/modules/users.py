@@ -99,7 +99,6 @@ def broadcast(update: Update, context: CallbackContext):
             f"Broadcast complete.\nGroups failed: {failed}.\nUsers failed: {failed_user}.",
         )
 
-
 @run_async
 def log_user(update: Update, context: CallbackContext):
     chat = update.effective_chat
