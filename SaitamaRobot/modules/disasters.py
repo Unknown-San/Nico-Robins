@@ -129,12 +129,12 @@ def addsudo(update: Update, context: CallbackContext) -> str:
         return ""
 
     if user_id in DEMONS:
-        rt += "Requested HA to promote a Defender to Attacker."
+        rt += "Requested HA to promote a Knight to Defender."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "Requested HA to promote a Demi-Human to Attacker."
+        rt += "Requested HA to promote a Demi-Human to Knight."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
