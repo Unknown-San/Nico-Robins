@@ -6,8 +6,7 @@ import spamwatch
 from pyrogram import Client, errors
 import telegram.ext as tg
 from telethon import TelegramClient
-from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
-from Python_ARQ import ARQ
+from motor.motor_asyncio import AsyncIOMotorClient as MongoClien
 
 StartTime = time.time()
 
@@ -94,7 +93,6 @@ if ENV:
     SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
     BOT_ID = os.environ.get ("BOT_ID", None)
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
-    ARQ_API_URL = os.environ.get("ARQ_API_URL", None)
 
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
@@ -160,7 +158,6 @@ else:
     SPAMWATCH_SUPPORT_CHAT = Config.SPAMWATCH_SUPPORT_CHAT
     SPAMWATCH_API = Config.SPAMWATCH_API
     INFOPIC = Config.INFOPIC
-    ARQ_API_URL = Config.ARQ_API_URL
 
     try:
         BL_CHATS = set(int(x) for x in Config.BL_CHATS or [])
@@ -190,10 +187,6 @@ dispatcher = updater.dispatcher
 pbot = Client("ErenPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
 db = mongo_client.SaitamaRobot
-
-# ARQ Client
-print("[INFO]: INITIALIZING ARQ CLIENT")
-arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
