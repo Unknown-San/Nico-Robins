@@ -6,7 +6,7 @@ import spamwatch
 from pyrogram import Client, errors
 import telegram.ext as tg
 from telethon import TelegramClient
-from motor.motor_asyncio import AsyncIOMotorClient as MongoClien
+from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 
 StartTime = time.time()
 
