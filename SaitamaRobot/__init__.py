@@ -7,6 +7,7 @@ from pyrogram import Client, errors
 import telegram.ext as tg
 from telethon import TelegramClient
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
+from Python_ARQ import ARQ
 
 StartTime = time.time()
 
@@ -187,6 +188,10 @@ dispatcher = updater.dispatcher
 pbot = Client("ErenPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
 db = mongo_client.SaitamaRobot
+
+# ARQ Client
+print("[INFO]: INITIALIZING ARQ CLIENT")
+arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
