@@ -94,6 +94,7 @@ if ENV:
     SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
     BOT_ID = os.environ.get ("BOT_ID", None)
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
+    ARQ_API_URL = os.environ.get("ARQ_API_URL", None)
 
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
@@ -159,6 +160,7 @@ else:
     SPAMWATCH_SUPPORT_CHAT = Config.SPAMWATCH_SUPPORT_CHAT
     SPAMWATCH_API = Config.SPAMWATCH_API
     INFOPIC = Config.INFOPIC
+    ARQ_API_URL = Config.ARQ_API_URL
 
     try:
         BL_CHATS = set(int(x) for x in Config.BL_CHATS or [])
