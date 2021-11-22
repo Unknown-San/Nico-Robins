@@ -65,20 +65,20 @@ def addpiro(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if int(user_id) in DEV_USERS:
-        message.reply_text("This member is already a Retarded DEV")
+        message.reply_text("This member is already a Healer DEV")
 
     if user_id in DRAGONS:
-        rt += "Requested HQ to promote a Yonko to Retarded DEV."
+        rt += "Requested HQ to promote a Attacker to Retarded DEV."
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "Requested HQ to promote a Vice Yonko to Retarded DEV."
+        rt += "Requested HQ to promote a Defender to Retarded DEV."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "Requested HQ to promote a Lieutenant Disaster to Retarded DEV."
+        rt += "Requested HQ to promote a Demi Human to Retarded DEV."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -89,7 +89,7 @@ def addpiro(update: Update, context: CallbackContext) -> str:
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + "\nSuccessfully set Disaster level of {} to Retarded DEV!".format(
+        rt + "\nSuccessfully set Disaster level of {} to Healer DEV!".format(
             user_member.first_name))
 
     log_message = (
@@ -125,16 +125,16 @@ def addsudo(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        message.reply_text("This member is already a Yonko")
+        message.reply_text("This member is already a Attacker")
         return ""
 
     if user_id in DEMONS:
-        rt += "Requested HA to promote a Vice Yonko to Admiral."
+        rt += "Requested HA to promote a Defender to Attacker."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "Requested HA to promote a New generations Disaster to Admiral."
+        rt += "Requested HA to promote a Demi-Human to Attacker."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
