@@ -184,16 +184,16 @@ def addsupport(
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "Requested HA to demote this Admiral to Warlord"
+        rt += "Requested HA to demote this Attacker to Defender"
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        message.reply_text("This user is already a Yonko.")
+        message.reply_text("This user is already a Defender.")
         return ""
 
     if user_id in WOLVES:
-        rt += "Requested HA to promote this New generations Disaster to Warlord"
+        rt += "Requested HA to promote this Demi-Human to Knight"
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -204,7 +204,7 @@ def addsupport(
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\n{user_member.first_name} was added as a Warlord!")
+        rt + f"\n{user_member.first_name} was added as a Defender!")
 
     log_message = (
         f"#SUPPORT\n"
@@ -239,17 +239,17 @@ def addwhitelist(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "This member is a Admiral, Demoting to New generations."
+        rt += "This member is a Attacker, Demoting to Defender."
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is already a Warlord, Demoting to New generations."
+        rt += "This user is already a Defender, Demoting to Knight."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        message.reply_text("This user is already a New generations.")
+        message.reply_text("This user is already a Demi-Human.")
         return ""
 
     data['whitelists'].append(user_id)
@@ -295,22 +295,22 @@ def addtiger(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "This member is a Yonko, Demoting to Bounty Hunter."
+        rt += "This member is a Attacker, Demoting to Demi-Human."
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is already a Warlord, Demoting to Bounty Hunter."
+        rt += "This user is already a Defender, Demoting to Demi-Human."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "This user is already a New generations Disaster, Demoting to Bounty Hunter."
+        rt += "This user is already a Knight, Demoting to Demi-Human."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
     if user_id in TIGERS:
-        message.reply_text("This user is already a Bounty Hunter.")
+        message.reply_text("This user is already a Demi-Human.")
         return ""
 
     data['tigers'].append(user_id)
