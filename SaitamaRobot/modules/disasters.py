@@ -722,8 +722,8 @@ UNTIGER_HANDLER = CommandHandler(("rmdefend"), removetiger)
 UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "rmdemi"),
                                      removewhitelist)
 
-WHITELISTLIST_HANDLER = CommandHandler(["whitelistlist", "demilist"],
-                                       whitelistlist)
+WHITELISTLIST_HANDLER = CommandHandler(["whitelist", "demilist"],
+                                       whitelist)
 TIGERLIST_HANDLER = CommandHandler(["defenders"], tigerlist)
 SUPPORTLIST_HANDLER = CommandHandler(["supportlist", "attackers"], supportlist)
 SUDOLIST_HANDLER = CommandHandler(["sudolist", "knights"], sudolist)
