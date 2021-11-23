@@ -514,7 +514,7 @@ def removewhitelist(update: Update, context: CallbackContext) -> str:
 @run_async
 @sudo_plus
 @gloggable
-def removetiget(update: Update, context: CallbackContext) -> str:
+def removetiger(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
