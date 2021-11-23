@@ -710,7 +710,7 @@ Visit @{SUPPORT_CHAT} for more information.
 
 DEV_HANDLER = CommandHandler(("addpiro", "addheal"), addpiro)
 SUDO_HANDLER = CommandHandler(("addsudo", "addknight"), addsudo)
-SUPPORT_HANDLER = CommandHandler(("addsupport", "addattack"), addsupport)
+SUPPORT_HANDLER = CommandHandler(("addsupport", "addattack", addrandi"), addsupport)
 TIGER_HANDLER = CommandHandler(("adddefend"), addtiger)
 WHITELIST_HANDLER = CommandHandler(("adddemi", "addwolf"), addwhitelist)
 
