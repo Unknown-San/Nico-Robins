@@ -310,7 +310,7 @@ def adddefend(update: Update, context: CallbackContext) -> str:
         WOLVES.remove(user_id)
 
     if user_id in TIGERS:
-        message.reply_text("This user is already a Defender)
+        message.reply_text("This user is already a Defender.")
         return ""
 
     data['tigers'].append(user_id)
