@@ -47,7 +47,7 @@ def check_user_id(user_id: int, context: CallbackContext) -> Optional[str]:
 @run_async
 @dev_plus
 @gloggable
-def addheal(update: Update, context: CallbackContext) -> str:
+def addpiro(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
@@ -107,7 +107,7 @@ def addheal(update: Update, context: CallbackContext) -> str:
 @run_async
 @dev_plus
 @gloggable
-def addknight(update: Update, context: CallbackContext) -> str:
+def addsudo(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
@@ -163,7 +163,7 @@ def addknight(update: Update, context: CallbackContext) -> str:
 @run_async
 @sudo_plus
 @gloggable
-def addattack(
+def addsupport(
     update: Update,
     context: CallbackContext,
 ) -> str:
@@ -221,7 +221,7 @@ def addattack(
 @run_async
 @sudo_plus
 @gloggable
-def adddhuman(update: Update, context: CallbackContext) -> str:
+def addwhitelist(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
@@ -277,7 +277,7 @@ def adddhuman(update: Update, context: CallbackContext) -> str:
 @run_async
 @sudo_plus
 @gloggable
-def adddefend(update: Update, context: CallbackContext) -> str:
+def addtiger(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
@@ -341,7 +341,7 @@ def adddefend(update: Update, context: CallbackContext) -> str:
 @run_async
 @dev_plus
 @gloggable
-def rmheal(update: Update, context: CallbackContext) -> str:
+def rmpiro(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
@@ -385,7 +385,7 @@ def rmheal(update: Update, context: CallbackContext) -> str:
 @run_async
 @dev_plus
 @gloggable
-def rmknight(update: Update, context: CallbackContext) -> str:
+def removesudo(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
@@ -429,7 +429,7 @@ def rmknight(update: Update, context: CallbackContext) -> str:
 @run_async
 @sudo_plus
 @gloggable
-def rmattack(update: Update, context: CallbackContext) -> str:
+def removesupport(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
@@ -472,7 +472,7 @@ def rmattack(update: Update, context: CallbackContext) -> str:
 @run_async
 @sudo_plus
 @gloggable
-def rmdhuman(update: Update, context: CallbackContext) -> str:
+def removewhitelist(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
@@ -514,7 +514,7 @@ def rmdhuman(update: Update, context: CallbackContext) -> str:
 @run_async
 @sudo_plus
 @gloggable
-def rmdefend(update: Update, context: CallbackContext) -> str:
+def removetiget(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
@@ -554,7 +554,7 @@ def rmdefend(update: Update, context: CallbackContext) -> str:
 
 @run_async
 @whitelist_plus
-def Demilist(update: Update, context: CallbackContext):
+def whitelist(update: Update, context: CallbackContext):
     reply = "<b>Known as Demi-Humans 🐺:</b>\n"
     bot = context.bot
     for each_user in WOLVES:
@@ -570,8 +570,8 @@ def Demilist(update: Update, context: CallbackContext):
 
 @run_async
 @whitelist_plus
-def denderlist(update: Update, context: CallbackContext):
-    reply = "<b>Knownb Difenders :</b>\n"
+def tigerlist(update: Update, context: CallbackContext):
+    reply = "<b>Known as Difenders :</b>\n"
     bot = context.bot
     for each_user in TIGERS:
         user_id = int(each_user)
@@ -585,7 +585,7 @@ def denderlist(update: Update, context: CallbackContext):
 
 @run_async
 @whitelist_plus
-def attackerlist(update: Update, context: CallbackContext):
+def supportlist(update: Update, context: CallbackContext):
     bot = context.bot
     reply = "<b>Known As Attackers👹:</b>\n"
     for each_user in DEMONS:
@@ -600,7 +600,7 @@ def attackerlist(update: Update, context: CallbackContext):
 
 @run_async
 @whitelist_plus
-def knightlist(update: Update, context: CallbackContext):
+def sudolist(update: Update, context: CallbackContext):
     bot = context.bot
     true_sudo = list(set(DRAGONS) - set(DEV_USERS))
     reply = "<b>Known As Knights😈:</b>\n"
@@ -616,7 +616,7 @@ def knightlist(update: Update, context: CallbackContext):
 
 @run_async
 @whitelist_plus
-def healerlist(update: Update, context: CallbackContext):
+def devlist(update: Update, context: CallbackContext):
     bot = context.bot
     true_dev = list(set(DEV_USERS) - {OWNER_ID})
     reply = "<b>Retarded Marine Devs:</b>\n"
@@ -708,26 +708,26 @@ Group admins/group owners do not need these commands.
 Visit @{SUPPORT_CHAT} for more information.
 """
 
-DEV_HANDLER = CommandHandler(("addpiro", "addretard"), addpiro)
-SUDO_HANDLER = CommandHandler(("addsudo", "addyonko"), addsudo)
-SUPPORT_HANDLER = CommandHandler(("addsupport", "addwarlord"), addsupport)
-TIGER_HANDLER = CommandHandler(("addnewgen"), addtiger)
-WHITELIST_HANDLER = CommandHandler(("addbounty", "addwolf"), addwhitelist)
+DEV_HANDLER = CommandHandler(("addpiro", "addheal"), addpiro)
+SUDO_HANDLER = CommandHandler(("addsudo", "addknight"), addsudo)
+SUPPORT_HANDLER = CommandHandler(("addsupport", "addattack"), addsupport)
+TIGER_HANDLER = CommandHandler(("adddefend"), addtiger)
+WHITELIST_HANDLER = CommandHandler(("adddemi", "addwolf"), addwhitelist)
 
-RMPIRO_HANDLER = CommandHandler(("rmretard", "removesudo"), rmpiro)
-UNSUDO_HANDLER = CommandHandler(("removesudo", "removeyonko"), removesudo)
-UNSUPPORT_HANDLER = CommandHandler(("removesupport", "removewarlord"),
+RMPIRO_HANDLER = CommandHandler(("rmknight", "removesudo"), rmpiro)
+UNSUDO_HANDLER = CommandHandler(("removesudo", "rmheal"), removesudo)
+UNSUPPORT_HANDLER = CommandHandler(("removesupport", "rmattack"),
                                    removesupport)
-UNTIGER_HANDLER = CommandHandler(("removenewgen"), removetiger)
-UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "removebounty"),
+UNTIGER_HANDLER = CommandHandler(("rmdefend"), removetiger)
+UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "rmdemi"),
                                      removewhitelist)
 
-WHITELISTLIST_HANDLER = CommandHandler(["whitelistlist", "bountyhunters"],
+WHITELISTLIST_HANDLER = CommandHandler(["whitelistlist", "demilist"],
                                        whitelistlist)
-TIGERLIST_HANDLER = CommandHandler(["newgens"], tigerlist)
-SUPPORTLIST_HANDLER = CommandHandler(["supportlist", "warlords"], supportlist)
-SUDOLIST_HANDLER = CommandHandler(["sudolist", "yonkos"], sudolist)
-DEVLIST_HANDLER = CommandHandler(["devlist", "retards"], devlist)
+TIGERLIST_HANDLER = CommandHandler(["defenders"], tigerlist)
+SUPPORTLIST_HANDLER = CommandHandler(["supportlist", "attackers"], supportlist)
+SUDOLIST_HANDLER = CommandHandler(["sudolist", "knights"], sudolist)
+DEVLIST_HANDLER = CommandHandler(["devlist", "healers"], devlist)
 
 dispatcher.add_handler(DEV_HANDLER)
 dispatcher.add_handler(SUDO_HANDLER)
