@@ -65,20 +65,20 @@ def addpiro(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if int(user_id) in DEV_USERS:
-        message.reply_text("This member is already a Healer DEV")
+        message.reply_text("This member is already a Healer")
 
     if user_id in DRAGONS:
-        rt += "Requested HQ to promote a Attacker to Retarded DEV."
+        rt += "Requested HQ to promote a Attacker to Healer."
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "Requested HQ to promote a Defender to Retarded DEV."
+        rt += "Requested HQ to promote a Defender to Healer."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "Requested HQ to promote a Demi Human to Retarded DEV."
+        rt += "Requested HQ to promote a Demi Human to Healer."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -89,7 +89,7 @@ def addpiro(update: Update, context: CallbackContext) -> str:
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + "\nSuccessfully set Disaster level of {} to Healer DEV!".format(
+        rt + "\nSuccessfully set Disaster level of {} to Healer!".format(
             user_member.first_name))
 
     log_message = (
@@ -129,12 +129,12 @@ def addsudo(update: Update, context: CallbackContext) -> str:
         return ""
 
     if user_id in DEMONS:
-        rt += "Requested HA to promote a Knight to Defender."
+        rt += "Requested HA to promote a Defender to Attacker."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "Requested HA to promote a Demi-Human to Knight."
+        rt += "Requested HA to promote a Knight to Attacker."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -145,7 +145,7 @@ def addsudo(update: Update, context: CallbackContext) -> str:
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + "\nSuccessfully set Disaster level of {} to Admiral!".format(
+        rt + "\nSuccessfully set Disaster level of {} to Attacker!".format(
             user_member.first_name))
 
     log_message = (
@@ -193,7 +193,7 @@ def addsupport(
         return ""
 
     if user_id in WOLVES:
-        rt += "Requested HA to promote this Demi-Human to Knight"
+        rt += "Requested HA to promote this Knight to Defender"
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -239,17 +239,17 @@ def addwhitelist(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "This member is a Attacker, Demoting to Defender."
+        rt += "This member is a Attacker, Demoting to Knight."
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is already a Defender, Demoting to Knight."
+        rt += "This user is Defender, Demoting to Knight."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        message.reply_text("This user is already a Demi-Human.")
+        message.reply_text("This user is already a Knight.")
         return ""
 
     data['whitelists'].append(user_id)
@@ -260,7 +260,7 @@ def addwhitelist(update: Update, context: CallbackContext) -> str:
 
     update.effective_message.reply_text(
         rt +
-        f"\nSuccessfully promoted {user_member.first_name} to a New generations!")
+        f"\nSuccessfully promoted {user_member.first_name} to a Knight!")
 
     log_message = (
         f"#WHITELIST\n"
@@ -300,12 +300,12 @@ def addtiger(update: Update, context: CallbackContext) -> str:
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is already a Defender, Demoting to Demi-Human."
+        rt += "This user is a Defender, Demoting to Demi-Human."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "This user is already a Knight, Demoting to Demi-Human."
+        rt += "This user is a Knight, Demoting to Demi-Human."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -321,7 +321,7 @@ def addtiger(update: Update, context: CallbackContext) -> str:
 
     update.effective_message.reply_text(
         rt +
-        f"\nSuccessfully promoted {user_member.first_name} to a Bounty Hunte!"
+        f"\nSuccessfully promoted {user_member.first_name} to a Demi-Human!"
     )
 
     log_message = (
