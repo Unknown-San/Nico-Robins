@@ -708,17 +708,17 @@ Group admins/group owners do not need these commands.
 Visit @{SUPPORT_CHAT} for more information.
 """
 
-DEV_HANDLER = CommandHandler(("addpiro", "addretard"), addpiro)
-SUDO_HANDLER = CommandHandler(("addsudo", "addyonko"), addsudo)
-SUPPORT_HANDLER = CommandHandler(("addsupport", "addwarlord"), addsupport)
-TIGER_HANDLER = CommandHandler(("addnewgen"), addtiger)
-WHITELIST_HANDLER = CommandHandler(("addbounty", "addwolf"), addwhitelist)
+DEV_HANDLER = CommandHandler(("addpiro", "addheal"), addpiro)
+SUDO_HANDLER = CommandHandler(("addsudo", "addknight"), addsudo)
+SUPPORT_HANDLER = CommandHandler(("addasupport", "addattack"), addsupport)
+TIGER_HANDLER = CommandHandler(("adddefend"), addtiger)
+WHITELIST_HANDLER = CommandHandler(("adddemi", "adddhuman"), addwhitelist)
 
-RMPIRO_HANDLER = CommandHandler(("rmretard", "removesudo"), rmpiro)
-UNSUDO_HANDLER = CommandHandler(("removesudo", "removeyonko"), removesudo)
-UNSUPPORT_HANDLER = CommandHandler(("removesupport", "removewarlord"),
+RMPIRO_HANDLER = CommandHandler(("rmpiro", "rmheal"), rmpiro)
+UNSUDO_HANDLER = CommandHandler(("removesudo", "rmknight"), removesudo)
+UNSUPPORT_HANDLER = CommandHandler(("removesupport", "rmattack"),
                                    removesupport)
-UNTIGER_HANDLER = CommandHandler(("removenewgen"), removetiger)
+UNTIGER_HANDLER = CommandHandler(("rmdef"), removetiger)
 UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "removebounty"),
                                      removewhitelist)
 
