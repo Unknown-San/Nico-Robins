@@ -31,8 +31,6 @@ import requests
 from bs4 import BeautifulSoup
 from telethon import events
 
-from SaitamaRobot import telethn, SUPPORT_CHAT, BOT_USERNAME
-
 
 @telethn.on(events.NewMessage(pattern="^/book (.*)"))
 async def _(event):
