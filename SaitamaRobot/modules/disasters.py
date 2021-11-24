@@ -184,7 +184,7 @@ def addsupport(
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "Requested to demote this Attacker to Defender"
+        rt += "Requested to demote this Knight to Attacker"
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
@@ -193,7 +193,7 @@ def addsupport(
         return ""
 
     if user_id in WOLVES:
-        rt += "Requested to promote this Defender to Attacker"
+        rt += "Requested to promote this Demi-Human to Attacker"
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
