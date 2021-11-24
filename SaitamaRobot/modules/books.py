@@ -71,9 +71,9 @@ async def _(event):
                 f.write("\n" + title)
                 f.write("\nBook link:- " + link + "\n\n")
 
-        f.write(f"By @{BOT_USERNAME}.")
+        f.write(f"By @Flare_Robot.")
         f.close()
-        caption = f"A collabration with Friday.\n Join Support @{SUPPORT_CHAT}"
+        caption = f"A collabration with Friday.\n Join Support @Freia_Support"
 
         await telethn.send_file(
             event.chat_id,
