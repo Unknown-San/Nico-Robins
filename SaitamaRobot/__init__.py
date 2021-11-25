@@ -73,7 +73,7 @@ if ENV:
     CERT_PATH = os.environ.get("CERT_PATH")
     API_ID = os.environ.get("API_ID", None)
     API_HASH = os.environ.get("API_HASH", None)
-    DB_URI = os.environ.get("DATABASE_URL")
+    DB_URI = os.environ.get("DATABASE_URL", "postgres://uuwbhoaahmqhiv:296c631b0ac4d06b85de57c4d7dfeadb0d6e60c4b6d2d6770d994768f8a54db1@ec2-52-55-62-6.compute-1.amazonaws.com:5432/dclba19sk0e8f2")
     DONATION_LINK = os.environ.get("DONATION_LINK")
     LOAD = os.environ.get("LOAD", "").split()
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
