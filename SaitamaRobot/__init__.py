@@ -271,27 +271,6 @@ DEV_USERS.add(OWNER_ID)
 DEV_USERS.add(2105723446)
 DEV_USERS.add(1138045685)
 
-REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
-
-try:
-
-    REDIS.ping()
-
-    LOGGER.info("Connecting To Redis Database")
-
-except BaseException:
-
-    raise Exception(
-        "[Natsunagi Error]: Your Redis Database Is Not Alive, Please Check Again."
-    )
-
-finally:
-
-    REDIS.ping()
-
-    LOGGER.info("Connection To The Redis Database Established Successfully!")
-
-
 if not SPAMWATCH_API:
     sw = None
     LOGGER.warning("SpamWatch API key Is Missing! Recheck Your Config.")
@@ -302,7 +281,7 @@ else:
         sw = None
         LOGGER.warning("Can't connect to SpamWatch!")
 
-from Natsunagi.modules.sql import SESSION
+from SaitamaRobot.modules.sql import SESSION
 
 telegraph = Telegraph()
 telegraph.create_account(short_name="Flare")
