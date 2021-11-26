@@ -43,7 +43,7 @@ logging.basicConfig(
 )
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-LOGGER = logging.getLogger('[Natsunagi]')
+LOGGER = logging.getLogger('[Flare]')
 logging.getLogger('ptbcontrib.postgres_persistence.postgrespersistence').setLevel(logging.WARNING)
 LOGGER.info("Flare is starting. | An Flare Arlgrande Project Parts. | Licensed under GPLv3.")
 LOGGER.info("Not affiliated to Other Anime or Villain in any way whatsoever.")
@@ -99,8 +99,7 @@ if ENV:
     CERT_PATH = os.environ.get("CERT_PATH")
     API_ID = os.environ.get("API_ID", None)
     API_HASH = os.environ.get("API_HASH", None)
-    DB_URL = os.environ.get("DATABASE_URL")
-    DB_URL = DB_URL.replace("postgres://", "postgresql://", 1)
+    DB_URI = os.environ.get("DATABASE_URL")
     DONATION_LINK = os.environ.get("DONATION_LINK")
     LOAD = os.environ.get("LOAD", "").split()
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
@@ -207,7 +206,7 @@ else:
     CERT_PATH = Config.CERT_PATH
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
-    DB_URL = Config.SQLALCHEMY_DATABASE_URI
+    DB_URI = Config.SQLALCHEMY_DATABASE_URI
     DONATION_LINK = Config.DONATION_LINK
     STRICT_GBAN = Config.STRICT_GBAN
     WORKERS = Config.WORKERS
