@@ -11,13 +11,13 @@ pillow
 pretty-errors
 psutil
 pynewtonmath
-python-telegram-bot==13.8.1
+python-telegram-bot==12.8.
 regex
 requests
 spamwatch
 speedtest-cli
 spongemock
-SQLAlchemy==1.4.27
+sqlalchemy==1.3.20
 telethon
 ujson
 wikipedia
