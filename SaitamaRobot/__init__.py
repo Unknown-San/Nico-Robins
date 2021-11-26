@@ -284,7 +284,6 @@ from SaitamaRobot.modules.sql import SESSION
 
 telegraph = Telegraph()
 telegraph.create_account(short_name="Flare")
-defaults = tg.Defaults(run_async=True)
 updater = tg.Updater(
     token=TOKEN,
     base_url=BOT_API_URL,
