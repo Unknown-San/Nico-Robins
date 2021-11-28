@@ -290,13 +290,13 @@ def info(update: Update, context: CallbackContext):
         text += "\n\nThe Disaster level of this person is <b>'Keyaru-Sama'</b>."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is member of the 'Healer Devs'."
+        text += "\n\nThis user is member of the 'Healer'."
         disaster_level_present = True
     elif user.id in DRAGONS:
         text += "\n\nThe Disaster level of this person is 'Knight'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThe Disaster level of this person is 'Attaker'."
+        text += "\n\nThe Disaster level of this person is 'Attacker'."
         disaster_level_present = True 
     elif user.id in TIGERS:
         text += "\n\nThe Disaster level of this person is 'Defender'."
