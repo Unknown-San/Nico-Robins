@@ -204,7 +204,7 @@ def addsupport(
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\n{user_member.first_name} was added as a Defender!")
+        rt + f"\n{user_member.first_name} was added as a Attacker!")
 
     log_message = (
         f"#SUPPORT\n"
@@ -710,7 +710,7 @@ Visit @{SUPPORT_CHAT} for more information.
 
 DEV_HANDLER = CommandHandler(("addpiro", "addheal"), addpiro)
 SUDO_HANDLER = CommandHandler(("addsudo", "addknight"), addsudo)
-SUPPORT_HANDLER = CommandHandler(("addsupport", "addattack", " addrandi"), addsupport)
+SUPPORT_HANDLER = CommandHandler(("addsupport", "addattack"), addsupport)
 TIGER_HANDLER = CommandHandler(("adddefend"), addtiger)
 WHITELIST_HANDLER = CommandHandler(("adddemi", "addwolf"), addwhitelist)
 
