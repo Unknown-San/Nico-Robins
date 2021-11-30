@@ -864,7 +864,7 @@ def animequotes(update: Update, context: CallbackContext):
     reply_photo(
         random.choice(QUOTES_IMG))
       
-@pgram.on_message(filters.command('watchorder'))
+@pbot.on_message(filters.command('watchorder'))
 def watchorderx(_,message):
 	anime =  message.text.replace(message.text.split(' ')[0], '')
 	res = requests.get(f'https://chiaki.site/?/tools/autocomplete_series&term={anime}').json()
