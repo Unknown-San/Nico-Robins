@@ -1182,4 +1182,3 @@ __handlers__ = [
     BUTTON_VERIFY_HANDLER,
     WELCOME_MUTE_HELP,
 ]
-
