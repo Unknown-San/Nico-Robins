@@ -170,6 +170,24 @@ DEV_USERS.add(OWNER_ID)
 DEMONS.add(1470075895)
 
 
+ 
+if not SPAMWATCH_API:
+    sw = None
+    LOGGER.warning("SpamWatch API key missing! recheck your config.")
+else:
+    try:
+        sw = spamwatch.Client(SPAMWATCH_API)
+    except:
+        sw = None
+        LOGGER.warning("Can't connect to SpamWatch!")
+
+updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
+telethn = TelegramClient("eren", API_ID, API_HASH)
+dispatcher = updater.dispatcher
+pbot = Client("ErenPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+mongo_client = MongoClient(MONGO_DB_URI)
+db = mongo_client.SaitamaRobot
+
 async def get_entity(client, entity):
     entity_client = client
     if not isinstance(entity, Chat):
@@ -196,24 +214,7 @@ async def get_entity(client, entity):
                 entity_client = pgram
     return entity, entity_client
 
-
-if not SPAMWATCH_API:
-    sw = None
-    LOGGER.warning("SpamWatch API key missing! recheck your config.")
-else:
-    try:
-        sw = spamwatch.Client(SPAMWATCH_API)
-    except:
-        sw = None
-        LOGGER.warning("Can't connect to SpamWatch!")
-
-updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
-telethn = TelegramClient("eren", API_ID, API_HASH)
-dispatcher = updater.dispatcher
-pbot = Client("ErenPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
-mongo_client = MongoClient(MONGO_DB_URI)
-db = mongo_client.SaitamaRobot
-
+apps = [pgram]
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
 WOLVES = list(WOLVES)
