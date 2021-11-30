@@ -752,6 +752,8 @@ dispatcher.add_handler(SET_TITLE_HANDLER)
 dispatcher.add_handler(ADMIN_REFRESH_HANDLER)
 dispatcher.add_handler(PROMOTE_HANDLER)
 dispatcher.add_handler(FULLPROMOTE_HANDLER)
+dispatcher.add_handler(LOW_PROMOTE_HANDLER)
+dispatcher.add_handler(MID_PROMOTE_HANDLER)
 
 __mod_name__ = "Admin"
 __command_list__ = [
@@ -760,6 +762,6 @@ __command_list__ = [
 __handlers__ = [
     ADMINLIST_HANDLER, PIN_HANDLER, UNPIN_HANDLER, INVITE_HANDLER,
     PROMOTE_HANDLER, DEMOTE_HANDLER, SET_TITLE_HANDLER, ADMIN_REFRESH_HANDLER, 
-    FULLPROMOTE_HANDLER
+    FULLPROMOTE_HANDLER, LOW_PROMOTE_HANDLER, MID_PROMOTE_HANDLER
 
 ]
