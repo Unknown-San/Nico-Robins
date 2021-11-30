@@ -170,7 +170,8 @@ DEV_USERS.add(OWNER_ID)
 DEMONS.add(1470075895)
 
 
- 
+pgram = Client("SenseiPyro", api_id=API_ID, api_hash=API_HASH, bot_token=Token)
+
 if not SPAMWATCH_API:
     sw = None
     LOGGER.warning("SpamWatch API key missing! recheck your config.")
@@ -187,32 +188,6 @@ dispatcher = updater.dispatcher
 pbot = Client("ErenPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
 db = mongo_client.SaitamaRobot
-
-async def get_entity(client, entity):
-    entity_client = client
-    if not isinstance(entity, Chat):
-        try:
-            entity = int(entity)
-        except ValueError:
-            pass
-        except TypeError:
-            entity = entity.id
-        try:
-            entity = await client.get_chat(entity)
-        except (PeerIdInvalid, ChannelInvalid):
-            for pgram in apps:
-                if pgram != client:
-                    try:
-                        entity = await pgram.get_chat(entity)
-                    except (PeerIdInvalid, ChannelInvalid):
-                        pass
-                    else:
-                        entity_client = pgram
-                        break
-            else:
-                entity = await pgram.get_chat(entity)
-                entity_client = pgram
-    return entity, entity_client
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
