@@ -170,7 +170,7 @@ DEV_USERS.add(OWNER_ID)
 DEMONS.add(1470075895)
 
 
-pgram = Client("SenseiPyro", api_id=API_ID, api_hash=API_HASH, bot_token=Token)
+pgram = Client("SenseiPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 if not SPAMWATCH_API:
     sw = None
