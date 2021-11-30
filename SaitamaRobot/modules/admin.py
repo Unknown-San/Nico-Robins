@@ -42,7 +42,7 @@ from bs4 import BeautifulSoup
 
 from SaitamaRobot.modules.helper_funcs.alternate import typing_action
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler
-from SaitamaRobot import OWNER_ID, REDIS, dispatcher, pgram
+from SaitamaRobot import OWNER_ID, REDIS_URL, dispatcher, pgram
 
 
 kaizoku_btn = "Kaizoku ☠️"
