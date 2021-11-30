@@ -738,7 +738,7 @@ FULLPROMOTE_HANDLER = DisableAbleCommandHandler("fullpromote", fullpromote)
 PROMOTE_HANDLER = DisableAbleCommandHandler("promote", promote)
 DEMOTE_HANDLER = DisableAbleCommandHandler("demote", demote)
 LOW_PROMOTE_HANDLER = DisableAbleCommandHandler("lowpromote", lowpromote)
-
+MID_PROMOTE_HANDLER = DisableAbleCommandHandler("midpromote", midpromote)
 SET_TITLE_HANDLER = CommandHandler("title", set_title)
 ADMIN_REFRESH_HANDLER = CommandHandler(
     "admincache", refresh_admin, filters=Filters.group)
