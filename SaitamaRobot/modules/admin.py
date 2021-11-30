@@ -40,9 +40,9 @@ from telegram.utils.helpers import mention_html
 from pyrogram import filters
 from bs4 import BeautifulSoup
 
-from Cutiepii_Robot.modules.helper_funcs.alternate import typing_action
-from Cutiepii_Robot.modules.disable import DisableAbleCommandHandler
-from Cutiepii_Robot import OWNER_ID, REDIS, dispatcher, pgram
+from SaitamaRobot.modules.helper_funcs.alternate import typing_action
+from SaitamaRobot.modules.disable import DisableAbleCommandHandler
+from SaitamaRobot import OWNER_ID, REDIS_URI, dispatcher, pgram
 
 
 kaizoku_btn = "Kaizoku ☠️"
