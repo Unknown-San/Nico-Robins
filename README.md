@@ -5,9 +5,9 @@
 
 A modular Telegram Python bot running on python3 with a sqlalchemy database and an entirely themed persona to make Saitama suitable for Anime and Manga group chats. 
 
-Can be found on telegram as [Nico](https://t.me/NicoRobin_robot).
+Can be found on telegram as [Flare](https://t.me/Flare_robot).
 
-The Support group can be reached out to at [Support Nico](https://t.me/Freia_Support), where you can ask for help about [Nico](https://t.me/NicoRobin_Robot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
+The Support group can be reached out to at [Flare Support](https://t.me/Freia_Support), where you can ask for help about [Flare](https://t.me/Flare_Robot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
 
 Owner bot [ASTA](https://t.me/Chifuyu_Matsuno_Kun) 
 
@@ -179,6 +179,6 @@ Also, missing proper credit for blacklistusers taken from TheRealPhoenixBot (wil
 
 Any other authorship/credits can be seen through the commits.
 
-Should any be missing kindly let us know at [Nico Robin Support](https://t.me/NicoRobin_Support) or simply submit a pull request on the readme.
+Should any be missing kindly let us know at [Flare Support](https://t.me/Freia_Support) or simply submit a pull request on the readme.
 	
 
