@@ -81,7 +81,7 @@ PM_START_TEXT = """
 • *Uptime:* `{}`
 • `{}` *users, across* `{}` *chats.*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-➛ Try The Help Buttons Below To Know My Abilities[.](https://telegra.ph/file/2870d2b427e680281bce1.jpg) ××
+➛ Try The Help Buttons Below To Know My Abilities[.](https://telegra.ph/file/802717be1f42d96b65c2d.jpg) ××
 """
 
 HELP_STRINGS = """
