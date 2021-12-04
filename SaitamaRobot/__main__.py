@@ -79,7 +79,8 @@ PM_START_TEXT = """
 * I am an Anime themed advance group management bot with a lots of Sexy and Cool Features.*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 • *Uptime:* `{}`
-• `{}` *users, across* `{}` *chats.*
+
+
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 ➛ Try The Help Buttons Below To Know My Abilities[.](https://telegra.ph/file/802717be1f42d96b65c2d.jpg) ××
 """
