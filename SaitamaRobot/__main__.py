@@ -2,6 +2,7 @@ import importlib
 import time
 import re
 from sys import argv
+improt pygram as pbot
 from typing import Optional
 
 from SaitamaRobot import (
