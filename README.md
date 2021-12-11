@@ -1,15 +1,15 @@
-![Nico Robins](https://telegra.ph/file/1059c50614cc9a28dea04.jpg)
-# Nico Robins 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6141417ceaf84545bab6bd671503df51)](https://app.codacy.com/gh/AnimeKaizoku/SaitamaRobot?utm_source=github.com&utm_medium=referral&utm_content=AnimeKaizoku/SaitamaRobot&utm_campaign=Badge_Grade_Settings)  [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/AnimeKaizoku/SaitamaRobot/graphs/commit-activity) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://perso.crans.org/besson/LICENSE.html) [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com) [![Updates channel!](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/OnePunchUpdates)
+![𝐁𝐨𝐚 𝐇𝐚𝐧𝐜𝐨𝐜𝐤](https://telegra.ph/file/c6d12f58142f768f289ee.jpg)
+# 𝐁𝐨𝐚 𝐇𝐚𝐧𝐜𝐨𝐜𝐤 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6141417ceaf84545bab6bd671503df51)](https://app.codacy.com/gh/AnimeKaizoku/SaitamaRobot?utm_source=github.com&utm_medium=referral&utm_content=AnimeKaizoku/SaitamaRobot&utm_campaign=Badge_Grade_Settings)  [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/AnimeKaizoku/SaitamaRobot/graphs/commit-activity) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://perso.crans.org/besson/LICENSE.html) [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com) [![Updates channel!](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/straydogs)
 
 
 A modular Telegram Python bot running on python3 with a sqlalchemy database and an entirely themed persona to make Saitama suitable for Anime and Manga group chats. 
 
-Can be found on telegram as [Nico](https://t.me/NicoRobin_robot).
+Can be found on telegram as [Boa Hancock](https://t.me/NicoRobin_strawhatbot).
 
-The Support group can be reached out to at [Support Nico](https://t.me/NicoRobin_Support), where you can ask for help about [Nico](https://t.me/NicoRobin_Robot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
+The Support group can be reached out to at [Support Nico](https://t.me/straydogs), where you can ask for help about [𝕭𝖔𝖆 𝕳𝖆𝖓𝖈𝖔𝖈𝖐](https://t.me/NicoRobin_strawhatbot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
 
-Owner bot [UNKNOWN](https://t.me/xtheanonymous) 
+Owner bot [UNKNOWN](https://t.me/straydogs) 
 
 ## How to setup/deploy.
 
@@ -165,10 +165,10 @@ You can use [nssm](https://nssm.cc/usage) to install the bot as service on windo
 Make sure to edit the start and restart bats to your needs. 
 Note: the restart bat requires that User account control be disabled.
 
-For queries or any issues regarding the bot please open an issue ticket or visit us at [One Punch Support](https://t.me/OnePunchSupport)
+For queries or any issues regarding the bot please open an issue ticket or visit us at [Boa Hancock Support](https://t.me/straydogs)
 ## How to setup on Heroku 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Unknown-san/Nico-Robins.git) 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kiravaibhav129/Boa_Hancock) 
 
 
 ## Credits

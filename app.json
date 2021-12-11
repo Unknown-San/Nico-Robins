@@ -1,5 +1,5 @@
 {
-      "name": "Nico Robin Robot",
+      "name": "Boa Hancock",
       "description": "An Anime themed Telegram group management bot.",
       "keywords": [
          "telegram",
@@ -8,8 +8,8 @@
          "manager",
          "Eren"
       ],   
-  "logo":    "https://telegra.ph/file/ac41e5086929782d252ef.jpg",
- "repository": "https://github.com/Unknown-San/Nico-Robins",
+  "logo":    "https://telegra.ph/file/c6d12f58142f768f289ee.jpg",
+ "repository": "https://github.com/kiravaibhav129/Boa_Hancock",
    "addons": [
       {
          "options": {
