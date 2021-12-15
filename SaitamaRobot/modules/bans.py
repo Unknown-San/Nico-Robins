@@ -14,10 +14,10 @@ from telegram.utils.helpers import mention_html
 from typing import Optional, List
 from telegram import TelegramError
 
-import Cutiepii_Robot.modules.sql.users_sql as sql
-from Cutiepii_Robot.modules.disable import DisableAbleCommandHandler
-from Cutiepii_Robot.modules.helper_funcs.filters import CustomFilters
-from Cutiepii_Robot import (
+import SaitamaRobot.modules.sql.users_sql as sql
+from SaitamaRobot.modules.disable import DisableAbleCommandHandler
+from SaitamaRobot.modules.helper_funcs.filters import CustomFilters
+from SaitamaRobot import (
     DEV_USERS,
     LOGGER,
     OWNER_ID,
@@ -27,7 +27,7 @@ from Cutiepii_Robot import (
     WOLVES,
     dispatcher,
 )
-from Cutiepii_Robot.modules.helper_funcs.chat_status import (
+from SaitamaRobot.modules.helper_funcs.chat_status import (
     user_admin_no_reply,
     bot_admin,
     can_restrict,
@@ -40,9 +40,9 @@ from Cutiepii_Robot.modules.helper_funcs.chat_status import (
     can_delete,
     dev_plus,
 )
-from Cutiepii_Robot.modules.helper_funcs.extraction import extract_user_and_text
-from Cutiepii_Robot.modules.helper_funcs.string_handling import extract_time
-from Cutiepii_Robot.modules.log_channel import gloggable, loggable
+from SaitamaRobot.modules.helper_funcs.extraction import extract_user_and_text
+from SaitamaRobot.modules.helper_funcs.string_handling import extract_time
+from SaitamaRobot.modules.log_channel import gloggable, loggable
 
 
 
