@@ -39,7 +39,6 @@ from SaitamaRobot.modules.helper_funcs.string_handling import extract_time
 from SaitamaRobot.modules.log_channel import gloggable, loggable
 
 
-@run_async
 @connection_status
 @bot_admin
 @can_restrict
@@ -56,7 +55,7 @@ def ban(update: Update, context: CallbackContext) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("I doubt that's a user.")
+        message.reply_text("Dude at least refer some user to ban!")
         return log_message
     try:
         member = chat.get_member(user_id)
@@ -71,23 +70,23 @@ def ban(update: Update, context: CallbackContext) -> str:
 
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
-            message.reply_text("Trying to put me against the God huh?")
+            message.reply_text("Trying to put me against a Master huh?")
         elif user_id in DEV_USERS:
             message.reply_text("I can't act against our own.")
         elif user_id in DRAGONS:
             message.reply_text(
-                "Fighting this Wizard Dragon here will put civilian lives at risk.",
+                "Fighting this Bersekser here will put user lives at risk."
             )
         elif user_id in DEMONS:
             message.reply_text(
-                "I cant do This To Our Honorly Wizard Demon.",
+                "Bring an order from Master Servant to fight a Assasin servant."
             )
         elif user_id in TIGERS:
             message.reply_text(
-                "Forget It, Its Not Gonna Happen To A Wizard Tiger.",
+                "Bring an order from Master Servant to fight a Lancer servant."
             )
         elif user_id in WOLVES:
-            message.reply_text("Wizard Wolf abilities make them ban immune!")
+            message.reply_text("Rider abilities make them ban immune!")
         else:
             message.reply_text("This user has immunity and cannot be banned.")
         return log_message
